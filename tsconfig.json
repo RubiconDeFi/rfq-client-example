@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "target": "es5", // or another version you prefer
+      "lib": ["dom", "es2015"], // include dom and other necessary libraries
+      "module": "commonjs", // or another module system you use
+      "strict": true,
+      "esModuleInterop": true,
+      "resolveJsonModule": true
+    }
+  }
+  
