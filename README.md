@@ -2,6 +2,8 @@
 
 This repository contains a script for testing a client implementation of Rubicon's RFQ system for an arbitrary chain and token pair. It allows you to fetch price levels and submit orders through an RFQ contract. Please see `rfq-test.ts` for a detailed code example you can use to aid your implementation.
 
+[To learn more about Rubicon RFQ, please see our official documentation.](https://docs.rubicon.finance/rubiconRfq)
+
 ## Prerequisites
 
 - Node.js
