@@ -35,11 +35,9 @@ export const tokenList: TokenList = {
         patch: 0,
     },
     tokens: [
-        // ** V1 MAINNET **
-        // ** QUOTES **
         {
             name: 'USDC Stablecoin',
-            symbol: 'USDC',
+            symbol: 'USDC.e',
             chainId: Network.OPTIMISM_MAINNET,
             address: '0x7F5c764cBc14f9669B88837ca1490cCa17c31607',
             decimals: 6,
@@ -123,49 +121,6 @@ export const tokenList: TokenList = {
             },
         },
 
-        //  ** V1 Mainnet Bath Tokens ***
-
-        {
-            symbol: 'bathDAI',
-            name: 'bathDAI v1',
-            decimals: 18,
-            address: '0x60daEC2Fc9d2e0de0577A5C708BcaDBA1458A833',
-            chainId: Network.OPTIMISM_MAINNET,
-            extensions: {
-                underlyingTicker: 'DAI',
-                rewardsLive: true,
-                underlyingAssetGeckoID: 'dai',
-                bathBuddy: '0x5fafd12ead4234270db300352104632187ed763a',
-            },
-        },
-
-        {
-            name: 'bathUSDC v1',
-            symbol: 'bathUSDC',
-            chainId: Network.OPTIMISM_MAINNET,
-            address: '0xe0e112e8f33d3f437D1F895cbb1A456836125952',
-            decimals: 6,
-            extensions: {
-                underlyingTicker: 'USDC',
-                rewardsLive: true,
-                underlyingAssetGeckoID: 'usd-coin',
-                bathBuddy: '0xfd6fd41bea9fd489ffdf05cd8118a69bf98caa5d',
-            },
-        },
-        {
-            symbol: 'bathUSDT',
-            name: 'bathUSDT v1',
-            decimals: 6,
-            chainId: Network.OPTIMISM_MAINNET,
-            address: '0xfFBD695bf246c514110f5DAe3Fa88B8c2f42c411',
-            extensions: {
-                underlyingTicker: 'USDT',
-                rewardsLive: true,
-                underlyingAssetGeckoID: 'tether',
-                bathBuddy: '0xdffdbb54b9968fee543a8d2bd3ce7a80d66cd49f',
-            },
-        },
-
         // *** NOTE THIS IS FAKE AND CANT ACTUALLY WRAP CAUSING ISSUES ON WRAP/UNWRAP as it cannot wrap/unwrap... Simply mint via faucet()
         {
             symbol: 'WETH',
@@ -188,17 +143,6 @@ export const tokenList: TokenList = {
                 quote: true,
                 underlyingAssetGeckoID: 'usd-coin',
             },
-        },
-
-        {
-            address: '0x45FA7d7b6C954d17141586e1BD63d2e35d3e26De',
-            chainId: Network.OPTIMISM_GOERLI,
-            symbol: 'F',
-            extensions: {
-                underlyingAssetGeckoID: 'optimism',
-            },
-            decimals: 18,
-            name: 'Forrest Coin',
         },
 
         {
@@ -403,7 +347,7 @@ export const tokenList: TokenList = {
             },
           },
           {
-            name: 'Test Token', // CAN PRETEND THIS IS PEPE!
+            name: 'Test Token',
             symbol: 'TEST',
             chainId: Network.ARBITRUM_SEPOLIA,
             address: '0x2fc8011B01c988249ace25ec2c624079ac146e04',
@@ -413,20 +357,13 @@ export const tokenList: TokenList = {
             name: 'Brett Coin',
             symbol: 'BRETT',
             chainId: Network.BASE_MAINNET,
-            // logoURI: `${TokenImages['BRETTLogo']}`,
             address: '0x532f27101965dd16442E59d40670FaF5eBB142E4',
             decimals: 18,
-            extensions: {
-              referenceVenue: 'univ3',
-              referenceVenueQuote: 'WETH',
-              referenceVenueFeeTier: process.env['BRETT_BASE_MAINNET_RVFT'] || '10000',
-            },
           },
           {
             name: 'Wrapped Ether',
             symbol: 'WETH',
             chainId: Network.BASE_MAINNET,
-            // logoURI: `${TokenImages['WETHLogo']}`,
             address: '0x4200000000000000000000000000000000000006',
             decimals: 18,
             extensions: {
@@ -438,7 +375,6 @@ export const tokenList: TokenList = {
             name: 'USD Base Coin',
             symbol: 'USDbC',
             chainId: Network.BASE_MAINNET,
-            // logoURI: `${TokenImages['USDCLogo']}`, // TODO: update to USDbC logo
             address: '0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA',
             decimals: 6,
             extensions: {
@@ -459,9 +395,8 @@ export const permit2addresses: { [chainId: number]: string } = {
 
 // reactor addresses
 export const reactorAddresses: { [chainId: number]: string } = {
-    // [Network.ARBITRUM_GOERLI]: '0x53B91D1724F4bb523C2598340849Ff7eb1A12465', //'0xFeF57fD5622EB4627b32642Ac0a010353f487090'// limit order // "0x77978ca9E4Fef774C8F493A776Bcf6e274940427",
-    [Network.OPTIMISM_MAINNET]: "0x98169248bDf25E0e297EA478Ab46ac24058Fac78", //"0xcB23e6c82c900E68d6F761bd5a193a5151A1D6d2",
-    [Network.ARBITRUM_GOERLI]:  '0xa7C007078CbEB6E0DF56A117752b4f44f4F93187', //'0x8D228f8A5C78F82E8300244497114BC482F6c213', // NEW ONE
+    [Network.OPTIMISM_MAINNET]: "0x98169248bDf25E0e297EA478Ab46ac24058Fac78", 
+    [Network.ARBITRUM_GOERLI]:  '0xa7C007078CbEB6E0DF56A117752b4f44f4F93187', 
     [Network.ARBITRUM_SEPOLIA]: '0x1456a1897509Bb9A42610d8fF5FE869D2612C181',
     [Network.BASE_MAINNET]: '0x3C53c04d633bec3fB0De3492607C239BF92d07f9',
     [Network.ARBITRUM_MAINNET]: '0x6D81571B4c75CCf08bD16032D0aE54dbaff548b0',
