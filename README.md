@@ -14,8 +14,8 @@ This repository contains a script for testing a client implementation of Rubicon
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/new-repo.git
-   cd new-repo
+   git clone https://github.com/RubiconDeFi/rfq-client-example.git
+   cd rfq-client-example
    ```
 
 2. Install dependencies:
