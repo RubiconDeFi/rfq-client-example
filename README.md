@@ -28,8 +28,9 @@ This repository contains a script for testing a client implementation of Rubicon
 1. Create a `.env` file in the root directory of the project and add the following environment variables:
 
    ```plaintext
-   API_KEY=your_api_key
-   PRIVATE_KEY=your_private_key
+   API_KEY=your_api_key (for the RFQ system)
+   TAG=your_api_tag (for the RFQ system)
+   PRIVATE_KEY=your_private_key (in case you want to execute trades, not required)
    <CHAIN_ID>_JSON_RPC=https://your-json-rpc-url
    ```
 
